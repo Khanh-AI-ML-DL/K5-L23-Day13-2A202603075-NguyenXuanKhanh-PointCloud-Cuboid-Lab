@@ -47,7 +47,7 @@ ALLOWED = {"docs/assets/hero.png", "docs/assets/coordinates.png", "docs/assets/w
 ALLOWED_IN_HISTORY = ALLOWED | {"guideline/3D_Cuboid_Annotation_Guideline.docx"}
 SUBMITTED_CSV = re.compile(r"submission/D13-([^/]+)-(?:bangA|tukiem)\.csv")
 REPORT_DIR = ROOT / "report" / "individual"
-REPORT_TEMPLATE = "MSSV_HoTen.md"
+REPORT_TEMPLATE = "2A202603075_NguyenXuanKhanh.md"
 REPORT_NAME = re.compile(r"(\S+)_([A-Za-z]+)\.md")  # <MSSV>_<HoTen>.md, họ tên không dấu, viết liền
 REQUIRED_IMAGE_STEMS = {
     "t2-a-car", "t2-b-bus-truck", "t2-c-ped-cyclist",
@@ -258,7 +258,7 @@ if student:
             flagged = sum(bool(r.get("flags")) for r in checked)
             print(f"tự kiểm: {flagged}/{len(checked)} cuboid còn cảnh báo (cảnh báo không tính điểm)")
 
-# 6. báo cáo: report/individual/<MSSV>_<HoTen>.md, đổi tên từ bản mẫu MSSV_HoTen.md
+# 6. báo cáo: report/individual/<MSSV>_<HoTen>.md, đổi tên từ bản mẫu 2A202603075_NguyenXuanKhanh.md
 example = f"{student or '2A202600123'}_NguyenVanAn.md"
 # Phiếu hồ sơ lỗi lỡ để ở đây (.gitignore đã chặn) không phải báo cáo.
 candidates = sorted(p for p in REPORT_DIR.glob("*.md")
